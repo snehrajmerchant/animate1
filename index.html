@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Frame Editor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="main-canvas-container">
+            <canvas id="onionSkinCanvas"></canvas>
+            <canvas id="mainCanvas"></canvas>
+        </div>
+        <div class="controls">
+            <div class="frame-count-control">
+                <label for="frameCount">Number of Frames:</label>
+                <input type="number" id="frameCount" min="1" value="4">
+                <button id="createFrames">Create Frames</button>
+            </div>
+            <div class="drawing-controls">
+                <button id="copyPrevious" disabled>Copy Previous Frame</button>
+                <button id="toggleMode" class="active">Draw Mode</button>
+                <button id="clearFrame">Clear Frame</button>
+                <button id="toggleOnionSkin">Show Onion Skin</button>
+            </div>
+            <div class="color-palette">
+                <div class="color-circle active" data-color="#000000" style="background-color: #000000"></div>
+                <div class="color-circle" data-color="#ff0000" style="background-color: #ff0000"></div>
+                <div class="color-circle" data-color="#00ff00" style="background-color: #00ff00"></div>
+                <div class="color-circle" data-color="#0000ff" style="background-color: #0000ff"></div>
+                <div class="color-circle" data-color="#ffff00" style="background-color: #ffff00"></div>
+                <div class="color-circle" data-color="#ff00ff" style="background-color: #ff00ff"></div>
+                <div class="color-circle" data-color="#00ffff" style="background-color: #00ffff"></div>
+            </div>
+            <div class="animation-controls">
+                <button id="playPause" class="play">Play</button>
+                <div class="speed-control">
+                    <label for="speedSlider">Speed:</label>
+                    <input type="range" id="speedSlider" min="1" max="30" value="10">
+                    <span id="speedValue">10 fps</span>
+                </div>
+            </div>
+            <div class="frame-thumbnails" id="frameThumbnails">
+                <!-- Frame thumbnails will be added here dynamically -->
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
